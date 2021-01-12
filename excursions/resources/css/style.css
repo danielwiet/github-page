@@ -1,0 +1,46 @@
+body {
+    background-color: #000;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* images set to width 100% and height auto will scale with window resize */
+.image--large {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+
+/* HEADINGS */
+
+.header--main {
+    font-weight: normal;
+    font-size: 50px;
+    color: white;
+}
+
+.header--secondary {
+    color: white;
+    font-weight: 300px;
+    font-size: 42px;
+}
+
+.header--subheader {
+    color: gray;
+    font-size: 21px;
+}
+
+/* LINKS */
+
+.link--cta {
+    font-size: 16px;
+    color: aquamarine;
+}
+
+/* FOOTER */
+
+.footer {
+    color: gray;
+    text-align: right;
+    font-size: 21px;
+}

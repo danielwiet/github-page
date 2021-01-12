@@ -1,0 +1,173 @@
+/* at this point in the css, the website is unresponsive. when you adjust the window, the images remain the same size */
+
+/* universal css */
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* text-decoration: none removes the underline from links, color: inherit removes the blue link color and it inherits from the parent */
+
+h2 {
+    margin-block-start: 1rem;
+    margin-block-end: 0;
+    padding: 0 1.5rem;
+}
+
+/* strong {
+    font-weight: bold;
+} */
+/* redundant code */
+
+/* Header */
+
+header {
+    padding: 1rem 1.5rem;
+} 
+/* puts a buffer around the header container of 16px top/bpttom and 24px left right */
+
+header span {
+    font-size: 2rem;
+}
+
+header .desktop {
+    display: flex;
+    align-items: center;
+}
+/* declares the div containers within header element and desktop class flex */
+
+header .logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+/* The remaining space is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors. */
+
+header .logo img {
+    margin-right: .5rem;
+}
+/* adds space next to the logo */
+
+header li {
+    display: inline-block;
+    padding-right: 1rem;
+}
+/* places the list items inline instead of default stacked. inline-block will keep list items together (opposed to wraping each word when using just 'inline') */
+
+header li:last-child {
+    padding-right: 1.5rem;
+}
+/* adds 24px space to the right of the last li item */
+
+header .mobile {
+    display: none;
+}
+/* hides the mobile icons until needed */
+
+@media only screen and (max-width :550px) {
+    header .desktop {
+        display: none;
+    }
+
+    header .mobile {
+        display: block;
+        width: 100%;
+        border-style: solid;
+    }
+
+    header .mobile ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+}
+/* unsure if  .logo, .logo span or nav are needed */
+
+/* banner */
+
+.flex-content {
+    display: flex;
+}
+
+.flex-content .main-content{
+    width: 60%;
+}
+/* sets width of the .main-content container to 60% of the screen */
+
+.flex-content .supporting-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+/* changes the orientation of the flex element containers in .suporting-content (h3, p, and a elements) to vertical (stacked) */
+
+.media-container {
+    overflow: hidden;
+}
+/* hides the overflow (in this case, anything past 60% as indicated by the .main-content) */
+
+.media-container img {
+    padding: 2rem 0 2rem 1.5rem;
+    display: block;
+    width: 100%;
+}
+/* forces the image to the width of the container (making the overflow: hidden rule redundant?)*/
+
+#banner {
+    background-color: rgb(219, 219, 219);
+}
+
+#banner .main-content {
+    border-right: none;
+}
+
+#banner .supporting-content {
+    justify-content: center;
+    text-align: center;
+    /* margin: 0; */
+    /* border-style: solid; */
+}
+/* centers the flex containers and centers the text */
+
+#banner h2 {
+    font-size: 2rem;
+    /* border-style: solid; */
+}
+
+ #banner p {
+    /* border-style: solid; */
+    padding: 0 1rem;
+}
+
+#banner a {
+    padding: .5rem;
+    /* border-style: solid; */
+    background-color: rgb(54, 54, 54);
+    color: white;
+    border-radius: 8px;
+    margin: 1.5rem;
+}
+
+#banner a:hover {
+    background-color: gray;
+    transition: background-color 550ms linear;
+}
+/* adds transition to the button */
+
+/* information section */
